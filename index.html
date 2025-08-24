@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+
+ <img src="background.jpg" alt="background" class="bg-image">
+
+  <div class="container">
+    <div class="left">
+      <img src="Tushar.jpeg" alt="Login Image">
+    </div>
+
+    <div class="right">
+      <div class="form-box">
+        <form id="loginForm" class="form sign-in">
+          <h2>Sign In</h2>
+
+          <input type="text" id="username" placeholder="Username" required>
+
+          <div class="password-field">
+            <input type="password" id="password" placeholder="Password" required>
+            <i class="fa fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+          </div>
+
+          <div class="login-box">
+            <button type="submit">Login</button>
+            <p id="loginMessage" style="color:red; margin-top:10px;"></p>
+          </div>
+
+          <div class="switch1">
+            <p class="signup-text">Don't have an account? 
+              <a href="signup.html">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+// Show / hide password
+function togglePassword(id, el) {
+  const input = document.getElementById(id);
+  if (input.type === "password") {
+    input.type = "text";
+    el.classList.replace("fa-eye", "fa-eye-slash");
+  } else {
+    input.type = "password";
+    el.classList.replace("fa-eye-slash", "fa-eye");
+  }
+}
+
+// Validation + redirect
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop refresh
+  const user = document.getElementById("username").value.trim();
+  const pass = document.getElementById("password").value.trim();
+  const msg = document.getElementById("loginMessage");
+
+  if (user === "" || pass === "") {
+    msg.innerText = "⚠️ Please enter username and password";
+    msg.style.color = "red";
+    return;
+  }
+
+  // Example login check (replace later with DB)
+  if (user === "Tushar" && pass === "1234") {
+    window.location.href = "Portfolio.html"; 
+  } else {
+    msg.innerText = "❌ Invalid username or password";
+    msg.style.color = "red";
+  }
+});
+</script>
+</body>
+</html>
+
