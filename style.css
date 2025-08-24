@@ -1,0 +1,378 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:none;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+/* Container */
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Left side image */
+.left {
+flex: 1;
+}
+.left img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Right side */
+.right {
+
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 50px;
+}
+
+/* Right side */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  background: url("background.jpg") no-repeat center center/cover;
+  padding: 20px;
+}
+/* Form box stays centered */
+.form-box{
+  background:transparent;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+
+.form {
+  display: none;
+  text-align: center;
+}
+
+.form h2 {
+margin-right: center;
+  margin-bottom: 20px;
+  color: #090808;
+}
+
+.form input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border-radius: 1px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  align-items: center;
+  background: lightskyblue;
+  transition: background-color 0.3s ease-in ;
+}
+
+.password-field {
+  position: relative;
+  width: 92%;
+}
+
+.password-field input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 10px;   /* space for eye */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.password-field .toggle-password {
+  position: absolute;
+  right: 20px;   /* place inside box */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.login-box{
+
+  align-items: center;
+  width: 100%;
+}
+.submit{
+  text-align: center;
+  text-color: white;
+}
+/* Switch Link */
+.switch1 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+.switch1 a {
+  color: #4facfe;
+  text-decoration: none;
+}
+.switch1 a:hover {
+  text-decoration: underline;
+}
+
+/* Show sign-in by default */
+.sign-in {
+  display: block;
+}
+
+bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Signup page  */
+
+/* Container */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 950px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+
+/* Right Side (Form Box Wrapper) */
+.right {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Form Box */
+.form-box {
+  width: 80%;
+  max-width: 400px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Inputs, Selects, Textarea */
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Textarea resize off */
+textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+/* Password field with eye icon */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+.password-field input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px; /* space for eye icon */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.password-field .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Buttons */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+.form-box button:hover {
+  background: #3a8edb;
+}
+
+/* Success Message */
+#signupMessage {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Switch Link */
+.switch {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+.switch a {
+  color: #4facfe;
+  text-decoration: none;
+}
+.switch a:hover {
+  text-decoration: underline;
+}
+
+/* Portfolio Page */
+.portfolio{
+  text-align: right;
+  text-size-adjust: 5px;
+}
+/* Navbar */
+nav {
+  background: #333;
+  color: #fff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 22px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Sections */
+section {
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+
+/* About */
+#about {
+  text-align: center;
+}
+
+#about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+#about h2 {
+  margin-bottom: 10px;
+  border-bottom: 3px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Section Titles */
+section h2 {
+  margin-bottom: 15px;
+  border-bottom: 3px solid #00bcd4;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+  margin-top: 30px;
+}
