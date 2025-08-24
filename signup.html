@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <title>Sign-up</title>
+</head>
+<body>
+  <div class="container">
+ <img src="background.jpg" alt="background" class="bg-image">
+
+    <!-- Right Side (Signup Form) -->
+    <div class="right">
+      <div class="form-box">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Middle Name">
+          <input type="text" placeholder="Last Name" required>
+
+          <select required>
+            <option value="" disabled selected>Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+
+          <input type="date" required>
+          <textarea placeholder="Address" required></textarea>
+
+          <select required>
+            <option value="" disabled selected>Educational Qualification</option>
+            <option>High School</option>
+            <option>Diploma</option>
+            <option>Bachelor</option>
+            <option>Master</option>
+            <option>Other</option>
+          </select>
+
+          <select required>
+            <option value="" disabled selected>Region</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>America</option>
+            <option>Africa</option>
+            <option>Other</option>
+          </select>
+
+          <input type="email" placeholder="Email ID" required>
+          <input type="text" placeholder="Username" required>
+
+          <div class="password-field">
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <i class="fa fa-eye toggle-password" onclick="togglePassword('signupPassword', this)"></i>
+          </div>
+            <a href="Portfolio.html">
+              <button type="button">Sign up</button>
+            </a>
+        </form>
+
+        <p id="signupMessage"></p>
+
+        <div class="switch">
+    <p>Already have an account? <a href="Login.html">Login</a></p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+function togglePassword(id, el) {
+  const input = document.getElementById(id);
+  if (input.type === "password") {
+    input.type = "text";
+    el.classList.replace("fa-eye","fa-eye-slash");
+  } else {
+    input.type = "password";
+    el.classList.replace("fa-eye-slash","fa-eye");
+  }
+}
+
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("signupMessage").innerText = "✅ Successfully Registered!";
+  document.getElementById("signupMessage").style.color = "green";
+  this.reset();
+});
+</script>
+</body>
+</html>
